@@ -1,0 +1,94 @@
+
+body {
+    background-color: rgb(249, 247, 247);
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(6, 7, 8);
+  }
+  
+  .gallery {
+    display: grid;
+    border: 2px;
+    border-radius: 5px;
+    border-color: black;
+    outline: 5px;
+    outline-style: solid;
+    outline-color:rgb(0, 0, 0);
+    outline-width: 2px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .gallery-item {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+ 
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+   display:block;
+    margin: auto;
+    max-width: 1000%;
+    max-height: 100%;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .navigation {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .nav-btn {
+    background: none;
+    color: white;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .nav-btn:hover {
+    color: #ccc;
+  }
